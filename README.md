@@ -1,2 +1,2 @@
 ## Preview
-[Link to Movies API website](https://gokulm-it.github.io/Movies_API/)
+[Link to Tv Show API website](https://gokulm-it.github.io/Movies_API/)
