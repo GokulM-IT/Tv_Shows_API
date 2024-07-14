@@ -34,7 +34,7 @@ h1 {
 ::placeholder {
     font-size: 1.1em;
     color: #006494;
-    font-family: cursive;
+    font-family:  cursive, sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
@@ -46,21 +46,22 @@ h1 {
 
 #form-container button {
     font-size: 1rem;
-    padding: 0.3em 1.3em;
-    border-radius: 0.5em;
-    color: #ffffff;
-    background-color: #3b28cc;
+    padding: 0.5em 1.5em;
+    border-radius: 50px;
+    color: #000000;
+    background-color: #ffffff;
     border: 2px solid #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    transition: 0.5s;
+    transition: all 0.3s ease-in;
 }
 
 #form-container button:hover {
     cursor: pointer;
-    background-color: #1d126f;
+    background-color: transparent;
+    color: #ffffff;
 }
 
 #container {
