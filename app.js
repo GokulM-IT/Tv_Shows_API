@@ -13,8 +13,8 @@ const setShowImage = (datas) => {
             const randomRating = Math.floor(Math.random() * 5) + 5;
 
             img.src = result.show.image.medium;
-            rating.innerHTML = result.show.rating.average ? '⭐' + result.show.rating.average : '⭐' + randomRating;
-            name.innerHTML = result.show.name.length > 18 ? result.show.name.slice(0, 18) + '...' : result.show.name;
+            rating.innerHTML = result.show.rating.average ? `⭐ ${result.show.rating.average}` : `⭐ ${randomRating}`;
+            name.innerHTML = result.show.name.length > 18 ? `${result.show.name.substring(0, 18)}...` : result.show.name;
             div.append(img, rating, name);
             container.append(div);
         }
