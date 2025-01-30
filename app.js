@@ -1,28 +1,28 @@
 const container = document.querySelector('#container');
 const form = document.querySelector('form');
 
-const setShowImage = (datas) => {
+const setShowImage = (data) => {
     container.innerHTML = '';
 
-    datas.forEach(result => {
-        if (result.show.image) {
+    data.forEach(eachData => {
+        if (eachData.show.image) {
             const div = document.createElement('div');
             const img = document.createElement('img');
             const rating = document.createElement('p');
             const name = document.createElement('p');
             const randomRating = Math.floor(Math.random() * 5) + 5;
 
-            img.src = result.show.image.medium;
-            rating.innerHTML = result.show.rating.average ? `⭐ ${result.show.rating.average}` : `⭐ ${randomRating}`;
-            name.innerHTML = result.show.name.length > 18 ? `${result.show.name.substring(0, 18)}...` : result.show.name;
+            img.src = eachData.show.image.medium;
+            rating.innerHTML = eachData.show.rating.average ? `⭐ ${eachData.show.rating.average}` : `⭐ ${randomRating}`;
+            name.innerHTML = eachData.show.name.length > 18 ? `${eachData.show.name.substring(0, 18)}...` : eachData.show.name;
             div.append(img, rating, name);
             container.append(div);
         }
     })
 }
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+form.addEventListener('submit', async (event) => {
+    event.preventDefault();
     const query = form.query.value;
     const config = { params: { q: query } }
 
